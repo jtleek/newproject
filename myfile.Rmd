@@ -26,3 +26,14 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r}
+library(dplyr)
+library(magrittr)
+library(ggplot2)
+
+dat <- iris %>% filter(Sepal.Length > 4 & Sepal.Width < 5) %>% ggplot(aes(x = Sepal.Length, y = Sepal.Width)) + 
+        geom_line(color = "blue", size = 1)
+dat
+```
+

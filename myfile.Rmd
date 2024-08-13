@@ -15,6 +15,13 @@ When you click the **Knit** button a document will be generated that includes bo
 
 ```{r cars}
 summary(cars)
+# Simulate predictor variable
+x <- rnorm(n = 100)
+# Simulate response variable with some noise
+y <- 2 * x + rnorm(n = 100, sd = 0.2)
+
+# Plot the data
+plot(x = x, y = y)
 ```
 
 ## Including Plots
